@@ -1,0 +1,5 @@
+Q1.A
+
+First, sort the list. This should be done in the constructor, since it is high impact and should only be done once. Since the list is already sorted, when checking for permission, binary search can be used to determine if the user ID has permission or not, and the time complexity of that binary search would be O(logn).
+
+Q1.B If there were no space constraints, I would create and insert all the IDs into a hash map in the constructor, and in hasPermission, I would use that previously created map to keep O(1) look up time of permission status.

@@ -1,0 +1,19 @@
+
+Q2.A
+[100 75 89 74 90] = [0, 1, 2, 1, 0]
+
+
+Q2.B
+A brute force/straight forward approach would be a double for loop, where for every element, you check every element after it for a larger value, and you change the array as you go through it instead of allocating more memory.
+
+Q2.C 
+For this problem, I used a monotonic stack. First, you start with a loop that runs for the length of your input vector, n. For every iteration, while my stack has indices, if the temperature of our current iteration is greater than the top of the stack, pop off elements. All the elements that are removed by the current iteration are warmer than it. As elements are popped off, their distances between the current iteration and the next warmer is added to the output vector.
+
+Q2.D 
+I would change the latter comparison in line 8 from temperatures[i] > temperatures[mono.top()] to temperatures[i] < temperatures[mono.top()].
+
+Q2.E Where n is the size of the input vector:
+
+The largest number of times push will be called is O(n), as the nature of monotonic stacks is that each number is only added to the stack once. Pop could potentially be called n-1 (so O(n)) times, because there is the case that every element in the stack is less than the current element.
+
+The worst case time complexity is O(n), and the worst case space complexity is also O(n) (for the stack size).

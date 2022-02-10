@@ -1,0 +1,8 @@
+Q5.A
+
+Loop through the rows or columns of the "2D" vector and push them onto a new vector, then run a standard library sort on it. The time complexity of the stl sort is nlogn, and since this is done once on the number of elements we have total, the time complexity of the full solution should be m*nlog(m*n). The space complexity would be O(m*n) because the stl sort is an in place sort so there is no significant additional space required for that, and the size of the comprehensive vector is the number of elements at the largest, m, the number of vectors, n (the largest vector's size) times.
+
+Q5.B 
+The worst case time complexity for the described approach:
+
+The time complexity is N*M^2, since you have to go through all of the mins of the vectors M times to be sure that you do have the minimum, and then you must do that for every vector, and at most you must do that N times.
